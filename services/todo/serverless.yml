@@ -20,6 +20,8 @@ service: todo # NOTE: update this with your service name
 provider:
   name: aws
   runtime: java8
+  stage: dev
+  region: ap-northeast-1
 
 # you can overwrite defaults here
 #  stage: dev
@@ -52,6 +54,10 @@ package:
 functions:
   hello:
     handler: com.serverless.Handler
+    events:
+      - http:
+          path: /todo
+          method: get
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
