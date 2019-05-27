@@ -59,3 +59,6 @@ task deploy(type: Exec, dependsOn: 'shadowJar') {
   commandLine 'serverless', 'deploy'
 }
 
+task remove(type: Exec) {
+  commandLine 'serverless', 'remove'
+}
