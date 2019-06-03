@@ -17,4 +17,4 @@ phases:
 artifacts:
   type: zip
   files:
-    - target/messageUtil-1.0.jar
+    - services/*/infrastructure/build/*.jar
